@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- HTMX CDN for dynamic interactions -->
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <!-- Lucide Icons CDN for UI icons -->
+    <script src="https://unpkg.com/lucide@0.0.6/dist/umd/lucide.min.js"></script>
+    <!-- Custom CSS for additional styles -->
+    <link rel="stylesheet" href="/static/custom.css">
+</head>
+<body class="flex flex-col h-screen bg-gray-900 text-gray-300">
+    <!-- Content block for page-specific content -->
+    {{ block "content" . }}{{ end }}
+</body>
+</html>
